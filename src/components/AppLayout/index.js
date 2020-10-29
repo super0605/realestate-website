@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import PropTypes from "prop-types";
 import { Layout } from "antd";
 import Header from "../Header";
-// import SideBar from "../SideBar";
 import MainContainerContext from "../../context/MainContainerContext";
 import {
   LayoutContainer,
@@ -18,7 +17,6 @@ const AppLayout = ({ logout, children, type }) => {
     <LayoutContainer>
       <Layout>
         <MainContainerContext.Provider value={{ getContainer: () => wrapperRef.current || window }}>
-          {/* {type !== "no_sidebar" && <SideBar />} */}
           <MainWrapContainer>
             <Header />
             <MainContainer type={type}>

@@ -20,15 +20,19 @@ const marks = {
   3: "3",
   4: "4",
   5: "5",
-  6: {
+  6: "6",
+  7: "7",
+  8: "8",
+  9: "9",
+  10: {
     style: {
       color: "#f50",
     },
-    label: <strong>6</strong>,
+    label: <strong>10</strong>,
   },
 };
 
-const CountFilter = ({ hide }) => {
+const CountFilter = ({ hide, title, minVal, maxVal, startVal, endVal, unit, appliedFilter, valueKey }) => {
   const [rangeVal, setRangeVal] = useState(0);
 
   const handleChange = (val) => {
@@ -36,27 +40,36 @@ const CountFilter = ({ hide }) => {
   };
 
   const handleCancel = () => {
+    setRangeVal(0);
     hide();
   };
 
   const handleApply = () => {
+    const fData = {
+      type: "static",
+      valueKey: valueKey,
+      value: rangeVal,
+    }
+    appliedFilter(fData)
     hide();
   };
 
   return (
     <Container>
       <Content>
-        <TitleText>Number of Bedroom</TitleText>
+        <TitleText>{title}</TitleText>
         <RangeValues>
-          <ValueElm>{rangeVal} - bed rooms</ValueElm>
+          <ValueElm>
+            {rangeVal} - {unit}
+          </ValueElm>
         </RangeValues>
         <SliderWrap>
           <Slider
             marks={marks}
             step={null}
             defaultValue={0}
-            min={0}
-            max={6}
+            min={minVal}
+            max={maxVal}
             onChange={handleChange}
           />
         </SliderWrap>
@@ -86,6 +99,14 @@ const CountFilter = ({ hide }) => {
 
 CountFilter.propTypes = {
   hide: PropTypes.func,
+  title: PropTypes.string,
+  minVal: PropTypes.number,
+  maxVal: PropTypes.number,
+  startVal: PropTypes.number,
+  endVal: PropTypes.number,
+  unit: PropTypes.string,
+  appliedFilter: PropTypes.func,
+  valueKey: PropTypes.string,
 };
 
 export default CountFilter;

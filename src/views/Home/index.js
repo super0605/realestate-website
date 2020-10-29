@@ -1,31 +1,40 @@
-import React from "react";
-import { withTheme } from "styled-components";
+import React, { useState } from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { Spin } from "antd";
 import FilterSection from "./FilterSection";
 import MainContentView from "./MainContentView";
-import { Container, LoadingArea } from "./styled";
+import { Container, LoadingArea, ErrView } from "./styled";
 import { GET_PROPERTIES } from "../../graphql/queries";
+import { defaultFilterOption } from "../../constants/global";
 
-const HomePage = ({ theme }) => {
+const HomePage = () => {
+  const [filterOptions, setFilterOptions] = useState(defaultFilterOption);
   const { loading, error, data, fetchMore } = useQuery(GET_PROPERTIES, {
     variables: {
       offset: 0,
-      limit: 10,
+      limit: 12,
+      priceGte: filterOptions.price.startVal,
+      priceLte: filterOptions.price.endVal,
+      pricePerSqmGte: filterOptions.pricePerSqm.startVal,
+      pricePerSqmLte: filterOptions.pricePerSqm.endVal,
+      sqmGte: filterOptions.sqm.startVal,
+      sqmLte: filterOptions.sqm.endVal,
+      numberOfBedroom: filterOptions.numberOfBedrooms.value,
+      numberOfBathroom: filterOptions.numberOfBathrooms.value,
     },
   });
 
   const handleFilterOptions = (options) => {
-    console.log("111111 ====+>", options)
-  }
+    setFilterOptions(options);
+  };
 
   if (error) {
-    return <p>Error 404</p>;
+    return <ErrView>Error 404</ErrView>;
   }
 
   return (
     <Container>
-      <FilterSection />
+      <FilterSection handleFilterOptions={handleFilterOptions} />
       {loading ? (
         <LoadingArea size="middle" whole={true}>
           <Spin size="large" />
@@ -38,7 +47,7 @@ const HomePage = ({ theme }) => {
             fetchMore({
               variables: {
                 offset: currentLength,
-                limit: 10,
+                limit: 12,
               },
               updateQuery: (prev, { fetchMoreResult }) => {
                 if (!fetchMoreResult) return prev;
@@ -46,7 +55,7 @@ const HomePage = ({ theme }) => {
                   allApartments: [...prev.allApartments, ...fetchMoreResult.allApartments],
                 });
               },
-            })
+            });
           }}
         />
       )}
@@ -54,4 +63,4 @@ const HomePage = ({ theme }) => {
   );
 };
 
-export default withTheme(HomePage);
+export default HomePage;

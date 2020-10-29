@@ -71,3 +71,4 @@ export const PricePerSqm = styled.div`
   font-family: "Roboto";
   font-weight: 400;
 `;
+

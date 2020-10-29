@@ -1,10 +1,8 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import { Switch, Route, Redirect } from "react-router-dom";
 import AppLayout from "./Layout";
 import HomePage from "./Home";
-import NotFoundPage from "./NotFoundPage";
 import themes from "../constants/theme";
 import routes from "../constants/routes";
 
@@ -37,7 +35,7 @@ const AuthenticatedRoute = ({ token, path, render, component, devMode = true, ..
  * Switch managing routing throughout application.
  */
 const AppRoutes = () => {
-  const { access_token } = useSelector(({ login: { authToken } }) => authToken);
+  const access_token = "test";
 
   return (
     <ThemeProvider theme={themes.default}>
@@ -52,12 +50,6 @@ const AppRoutes = () => {
           exact
           path={routes.PROPERTY}
           component={WithLayout(HomePage)}
-          token={access_token}
-        />
-        <AuthenticatedRoute
-          exact
-          path={routes.NotFoundPage}
-          component={WithLayout(NotFoundPage)}
           token={access_token}
         />
       </Switch>

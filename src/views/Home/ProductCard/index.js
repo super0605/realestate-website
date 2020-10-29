@@ -14,7 +14,15 @@ import {
   PricePerSqm,
 } from "./styled";
 
-const ProductCard = ({ title, price, pricePerSqm, sqm, numberOfBedrooms, numberOfBathrooms, imgUrl }) => {
+const ProductCard = ({
+  title,
+  price,
+  pricePerSqm,
+  sqm,
+  numberOfBedrooms,
+  numberOfBathrooms,
+  imgUrl,
+}) => {
   return (
     <Container>
       <ProductImg>
@@ -54,16 +62,20 @@ const ProductCard = ({ title, price, pricePerSqm, sqm, numberOfBedrooms, numberO
           </ValueElm>
         )}
         <DividerH />
-        {numberOfBedrooms && (
+        {numberOfBedrooms ? (
           <ValueElm>
             <i className="fa fa-bed" /> {numberOfBedrooms} habs.
           </ValueElm>
+        ) : (
+          <ValueElm>N/A</ValueElm>
         )}
         <DividerH />
-        {numberOfBathrooms && (
+        {numberOfBathrooms ? (
           <ValueElm>
             <i className="fa fa-bath" /> {numberOfBathrooms} banos
           </ValueElm>
+        ) : (
+          <ValueElm>N/A</ValueElm>
         )}
       </ValueGroup>
     </Container>

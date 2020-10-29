@@ -23,3 +23,15 @@ export const LoadingArea = styled.div`
   left: ${({ whole }) => whole && 0};
   background-color: ${({ whole }) => whole && "rgb(217 217 217 / 0.5)"};
 `;
+
+export const ErrView = styled.div`
+  width: 100%;
+  height: 70%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: "Roboto";
+  font-weight: bold;
+`;

@@ -1,19 +1,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { withTheme } from "styled-components";
-import { Menu, Input } from "antd";
+import { Menu } from "antd";
+import SearchInput from "../SearchInput";
 import { MenuOutlined } from "@ant-design/icons";
-import {
-  PageHeader,
-  LogoText,
-  LogoWrap,
-  MenuWrap,
-  Hamburger,
-  MenuItem,
-  SearchWrap,
-} from "./styled";
-
-const { Search } = Input;
+import { PageHeader, LogoText, LogoWrap, MenuWrap, Hamburger, MenuItem, SearchWraper } from "./styled";
 
 const HeaderComponent = ({ theme }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -21,8 +12,6 @@ const HeaderComponent = ({ theme }) => {
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
   };
-
-  const onSearch = value => console.log(value);
 
   return (
     <PageHeader>
@@ -32,9 +21,9 @@ const HeaderComponent = ({ theme }) => {
         </Hamburger>
         <LogoText>KASAZ</LogoText>
       </LogoWrap>
-      <SearchWrap>
-        <Search placeholder="input search text" defaultValue="Barcelona" onSearch={onSearch} enterButton />
-      </SearchWrap>
+      <SearchWraper>
+        <SearchInput />
+      </SearchWraper>
       <MenuWrap>
         <Menu theme="light" mode="horizontal" defaultSelectedKeys={["1"]}>
           <MenuItem key="1">SERVICES</MenuItem>

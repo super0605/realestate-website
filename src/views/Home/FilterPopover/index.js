@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Popover } from "antd";
 
-const FilterPopover = ({ children, filterContent: ContentComponent }) => {
+const FilterPopover = ({ children, filterContent: ContentComponent, ...childProps }) => {
   const [visible, setVisible] = useState(false);
 
   const handleVisibleChange = (val) => {
@@ -14,7 +14,7 @@ const FilterPopover = ({ children, filterContent: ContentComponent }) => {
 
   return (
     <Popover
-      content={<ContentComponent hide={hide} />}
+      content={<ContentComponent hide={hide} {...childProps} />}
       placement="bottomLeft"
       trigger="click"
       visible={visible}

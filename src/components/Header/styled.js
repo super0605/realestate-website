@@ -10,6 +10,29 @@ export const LogoText = styled.div`
   color: #136837;
 `;
 
+export const TinyLogoText = styled.div`
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Roboto";
+  color: #136837;
+  display: none;
+  @media (max-width: 499px) {
+    display: block;
+  }
+  @media (max-width: 365px) {
+    display: none;
+  }
+`;
+
+export const SearchWraper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 645px) {
+    display: none;
+  }
+`;
+
 export const PageHeader = styled(Header)`
   position: fixed;
   z-index: 1;
@@ -34,6 +57,10 @@ export const SettingMenu = styled.div`
 
 export const MenuWrap = styled.div`
   margin-right: -20px;
+
+  @media (max-width: 850px) {
+    display: none;
+  }
 `;
 
 export const LogoWrap = styled.div`
@@ -55,27 +82,4 @@ export const Hamburger = styled.div`
 export const MenuItem = styled(Menu.Item)`
   font-weight: bold;
   font-family: "Roboto";
-`;
-
-export const SearchWrap = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  & .ant-input-search {
-    width: 300px;
-    .ant-input-wrapper {
-      .ant-input {
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-      }
-      .ant-input-group-addon {
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        .ant-input-search-button {
-          border-top-right-radius: 20px;
-          border-bottom-right-radius: 20px;
-        }
-      }
-    }
-  }
 `;

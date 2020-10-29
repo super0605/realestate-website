@@ -15,25 +15,32 @@ import {
   ActionBtnGroup,
 } from "./styled";
 
-const RangeFilter = ({ hide }) => {
-  const [rangeVal, setRangeVal] = useState([0, 50000]);
+const RangeFilter = ({ title, maxVal, minVal, startVal, endVal, unit, hide, appliedFilter, valueKey }) => {
+  const [rangeVal, setRangeVal] = useState([startVal || minVal, endVal || maxVal]);
 
   const handleChange = (val) => {
     setRangeVal(val);
   };
 
   const handleCancel = () => {
+    setRangeVal([startVal || minVal, endVal || maxVal]);
     hide();
   };
 
   const handleApply = () => {
+    const fData = {
+      type: "range",
+      valueKey: valueKey,
+      value: rangeVal,
+    }
+    appliedFilter(fData);
     hide();
   };
 
   return (
     <Container>
       <Content>
-        <TitleText>Price</TitleText>
+        <TitleText>{title}</TitleText>
         <RangeValues>
           <ValueElm>
             <NumberFormat
@@ -41,7 +48,7 @@ const RangeFilter = ({ hide }) => {
               value={rangeVal[0]}
               thousandSeparator={true}
               decimalScale={0}
-              suffix="€"
+              suffix={unit || "€"}
             />
           </ValueElm>
           <DashElm>-</DashElm>
@@ -51,12 +58,18 @@ const RangeFilter = ({ hide }) => {
               value={rangeVal[1]}
               thousandSeparator={true}
               decimalScale={0}
-              suffix="€"
+              suffix={unit || "€"}
             />
           </ValueElm>
         </RangeValues>
         <SliderWrap>
-          <Slider range defaultValue={[0, 50000]} min={0} max={50000} onChange={handleChange} />
+          <Slider
+            range
+            defaultValue={[startVal || minVal, endVal || maxVal]}
+            min={minVal || 0}
+            max={maxVal || 0}
+            onChange={handleChange}
+          />
         </SliderWrap>
       </Content>
       <Divider />
@@ -84,6 +97,14 @@ const RangeFilter = ({ hide }) => {
 
 RangeFilter.propTypes = {
   hide: PropTypes.func,
+  title: PropTypes.string,
+  minVal: PropTypes.number,
+  maxVal: PropTypes.number,
+  startVal: PropTypes.number,
+  endVal: PropTypes.number,
+  unit: PropTypes.string,
+  appliedFilter: PropTypes.func,
+  valueKey: PropTypes.string,
 };
 
 export default RangeFilter;
