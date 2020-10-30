@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PButtonSecondary Component should render without problems 1`] = `
+<Styled(Button)
+  height="24px"
+  onClick={[Function]}
+  pchecked="false"
+  ptype="default"
+  pwithcheck="false"
+>
+  <Styled(Text)
+    className="button-text"
+    pchecked="false"
+    ptype="default"
+  >
+    Button
+  </Styled(Text)>
+</Styled(Button)>
+`;

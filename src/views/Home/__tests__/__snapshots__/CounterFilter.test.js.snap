@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountFilter should render without problems 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div
+      className="filter-title"
+    >
+      Number of Bedrooms
+    </styled.div>
+    <styled.div>
+      <styled.div
+        className="filter-value"
+      >
+        0
+         - 
+        rooms
+      </styled.div>
+    </styled.div>
+    <styled.div>
+      <Slider
+        defaultValue={0}
+        marks={
+          Object {
+            "0": "0",
+            "1": "1",
+            "10": Object {
+              "label": <strong>
+                10
+              </strong>,
+              "style": Object {
+                "color": "#f50",
+              },
+            },
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+          }
+        }
+        max={10}
+        min={1}
+        onChange={[Function]}
+        step={null}
+        tipFormatter={[Function]}
+      />
+    </styled.div>
+  </styled.div>
+  <Divider />
+  <styled.div>
+    <styled.div>
+      <PButtonSecondary
+        height="24px"
+        mright="16px"
+        onClick={[Function]}
+        pchecked={false}
+        pname="CANCEL"
+        psecondaryAlign="right"
+        ptype="default"
+        pwithCheck={false}
+      />
+      <PButtonSecondary
+        height="24px"
+        mright="16px"
+        onClick={[Function]}
+        pchecked={false}
+        pname="APPLY"
+        psecondaryAlign="right"
+        ptype="default"
+        pwithCheck={false}
+      />
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { withTheme } from "styled-components";
 import { Menu } from "antd";
 import SearchInput from "../SearchInput";
 import { MenuOutlined } from "@ant-design/icons";
-import { PageHeader, LogoText, LogoWrap, MenuWrap, Hamburger, MenuItem, SearchWraper } from "./styled";
+import {
+  PageHeader,
+  LogoText,
+  LogoWrap,
+  MenuWrap,
+  Hamburger,
+  MenuItem,
+  SearchWraper,
+} from "./styled";
 
-const HeaderComponent = ({ theme }) => {
+const HeaderComponent = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   const toggleCollapsed = () => {
@@ -36,8 +42,4 @@ const HeaderComponent = ({ theme }) => {
   );
 };
 
-HeaderComponent.propTypes = {
-  theme: PropTypes.object.isRequired,
-};
-
-export default withTheme(HeaderComponent);
+export default HeaderComponent;

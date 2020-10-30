@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component should render without problems 1`] = `
+<Styled(Header)>
+  <styled.div>
+    <styled.div
+      onClick={[Function]}
+    >
+      <ForwardRef(MenuOutlined) />
+    </styled.div>
+    <styled.div>
+      KASAZ
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <SearchInput />
+  </styled.div>
+  <styled.div>
+    <Menu
+      defaultSelectedKeys={
+        Array [
+          "1",
+        ]
+      }
+      mode="horizontal"
+      theme="light"
+    >
+      <Styled(MenuItem)
+        key="1"
+      >
+        SERVICES
+      </Styled(MenuItem)>
+      <Styled(MenuItem)
+        key="2"
+      >
+        GUIDES
+      </Styled(MenuItem)>
+      <Styled(MenuItem)
+        key="3"
+      >
+        BLOG
+      </Styled(MenuItem)>
+      <Styled(MenuItem)
+        key="4"
+      >
+        LOG IN
+      </Styled(MenuItem)>
+    </Menu>
+  </styled.div>
+</Styled(Header)>
+`;

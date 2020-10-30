@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider Component should render without problems 1`] = `
+<styled.div
+  height="1px"
+  pBottom="0px"
+  pleft="0px"
+  pright="0px"
+  ptop="0px"
+  width="100%"
+>
+  <styled.div
+    color="#fff"
+    height="1px"
+    pBottom="0px"
+    pleft="0px"
+    pright="0px"
+    ptop="0px"
+    width="100%"
+  />
+</styled.div>
+`;

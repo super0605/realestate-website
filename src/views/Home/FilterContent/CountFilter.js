@@ -57,9 +57,9 @@ const CountFilter = ({ hide, title, minVal, maxVal, startVal, endVal, unit, appl
   return (
     <Container>
       <Content>
-        <TitleText>{title}</TitleText>
+        <TitleText className="filter-title">{title}</TitleText>
         <RangeValues>
-          <ValueElm>
+          <ValueElm className="filter-value">
             {rangeVal} - {unit}
           </ValueElm>
         </RangeValues>

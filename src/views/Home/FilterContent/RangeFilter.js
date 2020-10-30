@@ -40,7 +40,7 @@ const RangeFilter = ({ title, maxVal, minVal, startVal, endVal, unit, hide, appl
   return (
     <Container>
       <Content>
-        <TitleText>{title}</TitleText>
+        <TitleText className="filter-title">{title}</TitleText>
         <RangeValues>
           <ValueElm>
             <NumberFormat

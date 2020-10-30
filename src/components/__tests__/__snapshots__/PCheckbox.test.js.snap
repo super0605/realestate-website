@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PCheckbox Component should render without problems 1`] = `
+<Styled(Checkbox)
+  height="14px"
+  width="14px"
+/>
+`;

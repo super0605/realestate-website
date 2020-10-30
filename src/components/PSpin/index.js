@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import { Spin, Alert } from "antd";
 
 const PSpin = () => {
   return (
@@ -9,7 +10,7 @@ const PSpin = () => {
         type="info"
       />
     </Spin>
-  )
-}
+  );
+};
 
 export default PSpin;

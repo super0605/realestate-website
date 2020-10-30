@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PButton Component should render without problems 1`] = `
+<Styled(Button)
+  height="38px"
+  ptype="default"
+>
+  <Styled(Text)
+    ptype="default"
+  >
+    BUTTON
+  </Styled(Text)>
+</Styled(Button)>
+`;

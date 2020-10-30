@@ -15,7 +15,7 @@ const MainContentView = ({ apartments, onLoadMore }) => {
 
   return (
     <PerfectScrollbar
-      options={{ suppressScrollX: true }}
+      options={{ suppressScrollX: true, wheelPropagation: false, cancelable: false }}
       onYReachEnd={debounce(handlePagination, 100)}
     >
       <Container>

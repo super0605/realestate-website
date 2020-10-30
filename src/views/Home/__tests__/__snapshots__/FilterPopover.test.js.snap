@@ -3,7 +3,7 @@
 exports[`FilterPopover should render without problems 1`] = `
 <Popover
   content={
-    <UNDEFINED
+    <RangeFilter
       hide={[Function]}
     />
   }

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppLayout Component should render without problems 1`] = `
+<Styled(Layout)>
+  <Layout>
+    <ContextProvider
+      value={
+        Object {
+          "getContainer": [Function],
+        }
+      }
+    >
+      <Styled(Content)>
+        <HeaderComponent />
+        <styled.div
+          type="default"
+        >
+          <styled.div>
+            &lt;div&gt;Children element&lt;/div&gt;
+          </styled.div>
+        </styled.div>
+      </Styled(Content)>
+    </ContextProvider>
+  </Layout>
+</Styled(Layout)>
+`;

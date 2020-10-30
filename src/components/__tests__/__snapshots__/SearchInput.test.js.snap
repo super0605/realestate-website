@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInput Component should render without problems 1`] = `
+<styled.div>
+  <Search
+    defaultValue="Barcelona"
+    enterButton={true}
+    onSearch={[Function]}
+    placeholder="input search text"
+  />
+</styled.div>
+`;

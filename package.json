@@ -37,6 +37,7 @@
     "react": "^16.13.1",
     "react-apollo": "^3.1.5",
     "react-csv": "^2.0.3",
+    "react-device-detect": "^1.14.0",
     "react-dom": "^16.13.1",
     "react-fontawesome-list": "^0.1.0",
     "react-number-format": "^4.4.1",
