@@ -70,13 +70,16 @@ export const LogoWrap = styled.div`
 export const HamburgerBtn = styled(Button)``;
 
 export const Hamburger = styled.div`
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-size: 18px;
   color: #136837;
   margin-right: 20px;
+  @media (max-width: 850px) {
+    display: flex;
+  }
 `;
 
 export const MenuItem = styled(Menu.Item)`

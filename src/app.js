@@ -12,9 +12,9 @@ const history = createBrowserHistory();
 
 const AppContainer = () => (
   <ApolloProvider client={client}>
-      <Router history={history}>
-        <AppRoutes />
-      </Router>
+    <Router history={history}>
+      <AppRoutes />
+    </Router>
   </ApolloProvider>
 );
 
