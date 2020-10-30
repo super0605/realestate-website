@@ -3,24 +3,22 @@
 exports[`AppLayout Component should render without problems 1`] = `
 <Styled(Layout)>
   <Layout>
-    <ContextProvider
-      value={
-        Object {
-          "getContainer": [Function],
-        }
-      }
-    >
-      <Styled(Content)>
-        <HeaderComponent />
-        <styled.div
-          type="default"
-        >
-          <styled.div>
-            &lt;div&gt;Children element&lt;/div&gt;
-          </styled.div>
+    <Styled(Content)>
+      <HeaderComponent
+        handleSidebar={[Function]}
+      />
+      <styled.div
+        type="default"
+      >
+        <styled.div>
+          &lt;div&gt;Children element&lt;/div&gt;
         </styled.div>
-      </Styled(Content)>
-    </ContextProvider>
+      </styled.div>
+    </Styled(Content)>
   </Layout>
+  <Sidebar
+    handleClose={[Function]}
+    isVisible={false}
+  />
 </Styled(Layout)>
 `;

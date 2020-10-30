@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import { Menu } from "antd";
 import SearchInput from "../SearchInput";
 import MenuOutlined from "@ant-design/icons/MenuOutlined";
@@ -12,11 +13,9 @@ import {
   SearchWraper,
 } from "./styled";
 
-const HeaderComponent = () => {
-  const [collapsed, setCollapsed] = useState(false);
-
+const HeaderComponent = ({ handleSidebar }) => {
   const toggleCollapsed = () => {
-    setCollapsed(!collapsed);
+    handleSidebar(true);
   };
 
   return (
@@ -40,6 +39,10 @@ const HeaderComponent = () => {
       </MenuWrap>
     </PageHeader>
   );
+};
+
+HeaderComponent.propTypes = {
+  handleSidebar: PropTypes.func,
 };
 
 export default HeaderComponent;

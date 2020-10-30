@@ -1,22 +1,28 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Layout } from "antd";
 import Header from "../Header";
+import Sidebar from "../Sidebar";
 import { LayoutContainer, MainWrapContainer, MainContainer, Wrapper } from "./styled";
 
 const AppLayout = ({ children, type }) => {
-  const wrapperRef = useRef();
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const handleCloseSidebar = () => {
+    setShowSidebar(false);
+  };
 
   return (
     <LayoutContainer>
       <Layout>
         <MainWrapContainer>
-          <Header />
+          <Header handleSidebar={setShowSidebar} />
           <MainContainer type={type}>
-            <Wrapper ref={wrapperRef}>{children}</Wrapper>
+            <Wrapper>{children}</Wrapper>
           </MainContainer>
         </MainWrapContainer>
       </Layout>
+      <Sidebar isVisible={showSidebar} handleClose={handleCloseSidebar} />
     </LayoutContainer>
   );
 };

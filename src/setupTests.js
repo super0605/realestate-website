@@ -49,4 +49,12 @@ global.requestAnimationFrame = function(callback) {
 global.cancelAnimationFrame = function(id) {
   clearTimeout(id);
 };
+
+global.matchMedia = global.matchMedia || function() {
+  return {
+      matches : false,
+      addListener : function() {},
+      removeListener: function() {}
+  }
+}
 copyProps(window, global);
