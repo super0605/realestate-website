@@ -6,7 +6,6 @@ This is Realestate website project based on the best practice architecture and m
 
 * node (tested with 12.x.x or more, might work with others)
 * npm or yarn (recommend yarn)
-* Make sure you have added ssh keys to bitbucket
 
 ## Installation Steps
 
@@ -42,7 +41,7 @@ Second command will also run coverage and display reports.
 ### Run App with Docker Development Environment
 
 ```
-$ docker-compose up -d --build
+$ docker-compose up
 ```
 
 ### Run App with Docker Production Environment
