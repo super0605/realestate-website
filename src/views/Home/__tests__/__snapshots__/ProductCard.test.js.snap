@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard should render without problems 1`] = `
+<styled.div>
+  <styled.div>
+    <img
+      alt="example"
+      src="house.jpg"
+    />
+    <styled.div>
+      <styled.div>
+        <styled.div>
+          <NumberFormat
+            allowEmptyFormatting={false}
+            allowLeadingZeros={false}
+            allowNegative={true}
+            decimalScale={0}
+            decimalSeparator="."
+            displayType="text"
+            fixedDecimalScale={false}
+            isAllowed={[Function]}
+            isNumericString={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseUp={[Function]}
+            onValueChange={[Function]}
+            prefix=""
+            suffix="€"
+            thousandSeparator={true}
+            thousandsGroupStyle="thousand"
+            type="text"
+            value={30000}
+          />
+        </styled.div>
+        <styled.div>
+          <NumberFormat
+            allowEmptyFormatting={false}
+            allowLeadingZeros={false}
+            allowNegative={true}
+            decimalScale={3}
+            decimalSeparator="."
+            displayType="text"
+            fixedDecimalScale={false}
+            isAllowed={[Function]}
+            isNumericString={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseUp={[Function]}
+            onValueChange={[Function]}
+            prefix=""
+            suffix="€/m²"
+            thousandSeparator={true}
+            thousandsGroupStyle="thousand"
+            type="text"
+            value={4000}
+          />
+        </styled.div>
+      </styled.div>
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    Lillian West
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      <i
+        className="fa fa-check-circle"
+      />
+       
+      120
+       m²
+    </styled.div>
+    <Styled(Divider) />
+    <styled.div>
+      <i
+        className="fa fa-bed"
+      />
+       
+      3
+       habs.
+    </styled.div>
+    <Styled(Divider) />
+    <styled.div>
+      <i
+        className="fa fa-bath"
+      />
+       
+      2
+       banos
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
