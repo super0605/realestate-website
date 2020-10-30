@@ -176,7 +176,7 @@ const FilterSection = ({ handleFilterOptions }) => {
         {!showLocationInfo && showFilterBtn && <SearchInput />}
         {showFilterBtn && (
           <FilterGroupBtn>
-            <Button onClick={handleFilterGroup}>
+            <Button className="filter-btn" onClick={handleFilterGroup}>
               Filter <FilterOutlined />
             </Button>
           </FilterGroupBtn>
@@ -192,14 +192,14 @@ const FilterSection = ({ handleFilterOptions }) => {
               </FilterElmWrap>
               <FilterElmWrap>
                 <FilterPopover filterContent={RangeFilter} {...priceFilterProps}>
-                  <Button>
+                  <Button className="filter-price">
                     {formatPriceBtn(filterOptions.price)} <FilterOutlined />
                   </Button>
                 </FilterPopover>
               </FilterElmWrap>
               <FilterElmWrap>
                 <FilterPopover filterContent={RangeFilter} {...pricePerSqmFilterProps}>
-                  <Button>
+                  <Button className="filter-pricePerSqm">
                     {formatPricePerSqmBtn(filterOptions.pricePerSqm)} <FilterOutlined />
                   </Button>
                 </FilterPopover>
@@ -208,21 +208,21 @@ const FilterSection = ({ handleFilterOptions }) => {
             <FilterGroupRight>
               <FilterElmWrap>
                 <FilterPopover filterContent={RangeFilter} {...sqmFilterProps}>
-                  <Button>
+                  <Button className="filter-sqm">
                     {formatSqmBtn(filterOptions.sqm)} <FilterOutlined />
                   </Button>
                 </FilterPopover>
               </FilterElmWrap>
               <FilterElmWrap>
                 <FilterPopover filterContent={CountFilter} {...nOfBedroomsFilterProps}>
-                  <Button>
+                  <Button className="filter-numberOfBedrooms">
                     {formatNOfBedroomBtn(filterOptions.numberOfBedrooms)} <FilterOutlined />
                   </Button>
                 </FilterPopover>
               </FilterElmWrap>
               <FilterElmWrap>
                 <FilterPopover filterContent={CountFilter} {...nOfBathroomsFilterProps}>
-                  <Button>
+                  <Button className="filter-numberOfBathrooms">
                     {formatNOfBathroomBtn(filterOptions.numberOfBathrooms)} <FilterOutlined />
                   </Button>
                 </FilterPopover>

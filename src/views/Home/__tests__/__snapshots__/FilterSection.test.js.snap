@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterSection should render filter group when clicking filter button 1`] = `
+<Styled(PBox)>
+  <styled.div>
+    <styled.div>
+      Barcelona
+    </styled.div>
+    <styled.div>
+      <styled.div>
+        <styled.div>
+          <Button
+            block={false}
+            ghost={false}
+            htmlType="button"
+            loading={false}
+            onClick={[Function]}
+          >
+            ALL 
+            <ForwardRef(FilterOutlined) />
+          </Button>
+        </styled.div>
+        <styled.div>
+          <FilterPopover
+            appliedFilter={[Function]}
+            endVal={1000000}
+            filterContent={[Function]}
+            maxVal={1000000}
+            minVal={0}
+            startVal={0}
+            title="Price"
+            unit="€"
+            valueKey="price"
+          >
+            <Button
+              block={false}
+              className="filter-price"
+              ghost={false}
+              htmlType="button"
+              loading={false}
+            >
+              Price
+               
+              <ForwardRef(FilterOutlined) />
+            </Button>
+          </FilterPopover>
+        </styled.div>
+        <styled.div>
+          <FilterPopover
+            appliedFilter={[Function]}
+            endVal={10000}
+            filterContent={[Function]}
+            maxVal={10000}
+            minVal={0}
+            startVal={0}
+            title="Price Per Sqm"
+            unit="€/m²"
+            valueKey="pricePerSqm"
+          >
+            <Button
+              block={false}
+              className="filter-pricePerSqm"
+              ghost={false}
+              htmlType="button"
+              loading={false}
+            >
+              Price Per Sqm
+               
+              <ForwardRef(FilterOutlined) />
+            </Button>
+          </FilterPopover>
+        </styled.div>
+      </styled.div>
+      <styled.div>
+        <styled.div>
+          <FilterPopover
+            appliedFilter={[Function]}
+            endVal={200}
+            filterContent={[Function]}
+            maxVal={200}
+            minVal={0}
+            startVal={0}
+            title="Square Meter"
+            unit="m²"
+            valueKey="sqm"
+          >
+            <Button
+              block={false}
+              className="filter-sqm"
+              ghost={false}
+              htmlType="button"
+              loading={false}
+            >
+              Sqm
+               
+              <ForwardRef(FilterOutlined) />
+            </Button>
+          </FilterPopover>
+        </styled.div>
+        <styled.div>
+          <FilterPopover
+            appliedFilter={[Function]}
+            endVal={10}
+            filterContent={[Function]}
+            maxVal={10}
+            minVal={0}
+            startVal={0}
+            title="Number of Bedrooms"
+            unit="rooms"
+            valueKey="numberOfBedrooms"
+          >
+            <Button
+              block={false}
+              className="filter-numberOfBedrooms"
+              ghost={false}
+              htmlType="button"
+              loading={false}
+            >
+              Number of bedrooms
+               
+              <ForwardRef(FilterOutlined) />
+            </Button>
+          </FilterPopover>
+        </styled.div>
+        <styled.div>
+          <FilterPopover
+            appliedFilter={[Function]}
+            endVal={10}
+            filterContent={[Function]}
+            maxVal={10}
+            minVal={0}
+            startVal={0}
+            title="Number of Bathrooms"
+            unit="rooms"
+            valueKey="numberOfBathrooms"
+          >
+            <Button
+              block={false}
+              className="filter-numberOfBathrooms"
+              ghost={false}
+              htmlType="button"
+              loading={false}
+            >
+              Number of bathrooms
+               
+              <ForwardRef(FilterOutlined) />
+            </Button>
+          </FilterPopover>
+        </styled.div>
+      </styled.div>
+      <styled.div>
+        <Button
+          block={false}
+          ghost={false}
+          htmlType="button"
+          loading={false}
+          onClick={[Function]}
+        >
+          <i
+            className="fa fa-times-circle"
+          />
+        </Button>
+      </styled.div>
+    </styled.div>
+  </styled.div>
+</Styled(PBox)>
+`;
+
+exports[`FilterSection should render without problems 1`] = `
+<Styled(PBox)>
+  <styled.div>
+    <styled.div>
+      Barcelona
+    </styled.div>
+    <styled.div>
+      <Button
+        block={false}
+        className="filter-btn"
+        ghost={false}
+        htmlType="button"
+        loading={false}
+        onClick={[Function]}
+      >
+        Filter 
+        <ForwardRef(FilterOutlined) />
+      </Button>
+    </styled.div>
+  </styled.div>
+</Styled(PBox)>
+`;

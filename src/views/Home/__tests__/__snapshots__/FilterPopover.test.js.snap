@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterPopover should render without problems 1`] = `
+<Popover
+  content={
+    <UNDEFINED
+      hide={[Function]}
+    />
+  }
+  mouseEnterDelay={0.1}
+  mouseLeaveDelay={0.1}
+  onVisibleChange={[Function]}
+  overlayStyle={Object {}}
+  placement="bottomLeft"
+  transitionName="zoom-big"
+  trigger="click"
+  visible={false}
+/>
+`;

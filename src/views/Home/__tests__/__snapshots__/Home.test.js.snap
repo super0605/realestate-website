@@ -10269,6 +10269,7 @@ exports[`HomePage should render without problems 1`] = `
                             >
                               <Button
                                 block={false}
+                                className="filter-btn"
                                 ghost={false}
                                 htmlType="button"
                                 loading={false}
@@ -10276,7 +10277,7 @@ exports[`HomePage should render without problems 1`] = `
                               >
                                 <Wave>
                                   <button
-                                    className="ant-btn"
+                                    className="ant-btn filter-btn"
                                     onClick={[Function]}
                                     type="button"
                                   >
