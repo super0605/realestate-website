@@ -2,8 +2,8 @@ version: '3.7'
 
 services:
 
-  whizmo-backoffice:
-    container_name: whizmo-backoffice
+  realestate-kasaz:
+    container_name: realestate-kasaz
     build:
       context: .
       dockerfile: Dockerfile
@@ -11,8 +11,8 @@ services:
       - '.:/app'
       - '/app/node_modules'
     ports:
-      - 3000:3000
+      - 8080:8080
     expose:
-      - "3000"
+      - "8080"
     environment:
       - NODE_ENV=development
