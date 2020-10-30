@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainContentView should render without problems 1`] = `
+<ScrollBar
+  className=""
+  component="div"
+  containerRef={[Function]}
+  onSync={[Function]}
+  onYReachEnd={[Function]}
+  options={
+    Object {
+      "suppressScrollX": true,
+    }
+  }
+>
+  <styled.div>
+    <Row
+      gutter={
+        Object {
+          "lg": 32,
+          "md": 24,
+          "sm": 16,
+          "xs": 8,
+        }
+      }
+    >
+      <Col
+        className="gutter-row"
+        key="0"
+        lg={8}
+        md={12}
+        sm={12}
+        xl={6}
+        xs={24}
+      >
+        <ProductCard
+          imgUrl="house.jpg"
+          numberOfBathrooms={2}
+          numberOfBedrooms={3}
+          price={30000}
+          pricePerSqm={4000}
+          sqm={120}
+          title="Lillian West"
+        />
+      </Col>
+    </Row>
+  </styled.div>
+</ScrollBar>
+`;

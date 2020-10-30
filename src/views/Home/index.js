@@ -29,7 +29,7 @@ const HomePage = () => {
   };
 
   if (error) {
-    return <ErrView>Error 404</ErrView>;
+    return <ErrView>Could not load data from data source.</ErrView>;
   }
 
   return (

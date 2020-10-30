@@ -5,19 +5,16 @@ module.exports = {
   collectCoverageFrom: ["src/**/*.{js,jsx,mjs}", "!**/node_modules/**"],
   setupFilesAfterEnv: ["./src/setupTests.js"],
   snapshotSerializers: ["enzyme-to-json/serializer"],
-  setupFiles: ["./src/setupTests.js"],
+  setupFiles: ["./src/setupTests.js", "./__mocks__/globalMock.js"],
   // roots: ["<rootDir>/src"],
   transform: {
     "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
   },
   transformIgnorePatterns: [
     "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$",
-    "^.+\\.module\\.(css|sass|scss)$"
+    "^.+\\.module\\.(css|sass|scss)$",
   ],
-  testPathIgnorePatterns: [
-    "node_modules/",
-    "src/assets/",
-  ],
+  testPathIgnorePatterns: ["node_modules/", "src/assets/"],
   coveragePathIgnorePatterns: [
     "node_modules/",
     "src/assets/",

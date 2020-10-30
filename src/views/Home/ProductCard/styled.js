@@ -16,6 +16,8 @@ export const Container = styled.div`
 
 export const ProductImg = styled.div`
   width: 100%;
+  background-color: #ffffff;
+  min-height: 150px;
   position: relative;
   & img {
     width: 100%;
@@ -71,4 +73,3 @@ export const PricePerSqm = styled.div`
   font-family: "Roboto";
   font-weight: 400;
 `;
-

@@ -3,14 +3,9 @@ import PropTypes from "prop-types";
 import { Layout } from "antd";
 import Header from "../Header";
 import MainContainerContext from "../../context/MainContainerContext";
-import {
-  LayoutContainer,
-  MainWrapContainer,
-  MainContainer,
-  Wrapper,
-} from "./styled";
+import { LayoutContainer, MainWrapContainer, MainContainer, Wrapper } from "./styled";
 
-const AppLayout = ({ logout, children, type }) => {
+const AppLayout = ({ children, type }) => {
   const wrapperRef = useRef();
 
   return (
@@ -30,7 +25,6 @@ const AppLayout = ({ logout, children, type }) => {
 };
 
 AppLayout.propTypes = {
-  logout: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
   type: PropTypes.oneOf(["default", "no_sidebar"]),
 };
