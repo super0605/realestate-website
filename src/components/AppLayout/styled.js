@@ -1,15 +1,14 @@
 import styled from "styled-components";
 import { Layout } from "antd";
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 
 export const LayoutContainer = styled(Layout)`
   min-height: 100vh;
 `;
 
 export const MainWrapContainer = styled(Content)`
-  background: ${({ theme }) => theme.colors.mainBackground};
-  max-height: ${({ theme }) => `calc(100vh - ${theme.footer.footerHeight}px)`};
+  background: #f8f9fa;
   z-index: 1;
 `;
 
@@ -24,13 +23,4 @@ export const Wrapper = styled.div`
   & .feeprofile-new-modal {
     position: absolute;
   }
-`;
-
-export const FooterContainer = styled(Footer)`
-  height: ${({ theme }) => theme.footer.footerHeight}px;
-  border-top: ${({ theme }) => theme.footer.borderTop};
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  padding: 0px;
 `;

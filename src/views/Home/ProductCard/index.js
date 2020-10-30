@@ -72,7 +72,7 @@ const ProductCard = ({
         <DividerH />
         {numberOfBathrooms ? (
           <ValueElm>
-            <i className="fa fa-bath" /> {numberOfBathrooms} banos
+            <i className="fa fa-bath" /> {numberOfBathrooms} baños
           </ValueElm>
         ) : (
           <ValueElm>N/A</ValueElm>

@@ -35,30 +35,28 @@ const HomePage = () => {
   return (
     <Container>
       <FilterSection handleFilterOptions={handleFilterOptions} />
-      {loading ? (
-        <LoadingArea size="middle" whole={true}>
-          <Spin size="large" />
-        </LoadingArea>
-      ) : (
-        <MainContentView
-          apartments={data.allApartments || []}
-          onLoadMore={() => {
-            const currentLength = data.allApartments.length;
-            fetchMore({
-              variables: {
-                offset: currentLength,
-                limit: 12,
-              },
-              updateQuery: (prev, { fetchMoreResult }) => {
-                if (!fetchMoreResult) return prev;
-                return Object.assign({}, prev, {
-                  allApartments: [...prev.allApartments, ...fetchMoreResult.allApartments],
-                });
-              },
-            });
-          }}
-        />
-      )}
+      <LoadingArea size="middle" whole={true} isLoading={loading}>
+        <Spin size="large" />
+      </LoadingArea>
+      <MainContentView
+        isLoading={loading}
+        apartments={loading ? [] : data.allApartments || []}
+        onLoadMore={() => {
+          const currentLength = data.allApartments.length;
+          fetchMore({
+            variables: {
+              offset: currentLength,
+              limit: 12,
+            },
+            updateQuery: (prev, { fetchMoreResult }) => {
+              if (!fetchMoreResult) return prev;
+              return Object.assign({}, prev, {
+                allApartments: [...prev.allApartments, ...fetchMoreResult.allApartments],
+              });
+            },
+          });
+        }}
+      />
     </Container>
   );
 };

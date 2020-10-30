@@ -52,6 +52,6 @@ describe("ProductCard", () => {
   });
 
   it("should render property number of bathrooms", () => {
-    expect(wrapper.text().includes("2 banos")).toBe(true);
+    expect(wrapper.text().includes("2 baños")).toBe(true);
   });
 });

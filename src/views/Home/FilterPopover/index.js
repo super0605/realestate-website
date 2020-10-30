@@ -8,9 +8,9 @@ const FilterPopover = ({ children, filterContent: ContentComponent, ...childProp
     setVisible(val);
   };
 
-  function hide() {
+  const hide = () => {
     setVisible(false);
-  }
+  };
 
   return (
     <Popover

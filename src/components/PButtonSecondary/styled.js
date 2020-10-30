@@ -19,26 +19,26 @@ export const CustomButton = styled(Button)`
     background-color: transparent;
     background: transparent;
     span {
-      color: ${({ theme }) => theme.components.button.buttonSecondary.default.color};
+      color: #757575;
       opacity: 0.4;
     }
   }
   &.ant-btn[disabled]:hover {
     background-color: transparent;
     span {
-      color: ${({ theme }) => theme.components.button.buttonSecondary.default.color};
+      color: #757575;
     }
   }
   &.ant-btn[disabled]:focus {
     span {
-      color: ${({ theme }) => theme.components.button.buttonSecondary.default.color};
+      color: #757575;
     }
   }
 
   &:hover {
     background-color: transparent;
     span {
-      color: ${({ theme }) => theme.components.button.buttonSecondary.default.hoverColor};
+      color: #f05324;
     }
   }
 `;

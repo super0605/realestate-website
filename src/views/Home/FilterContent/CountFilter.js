@@ -32,7 +32,7 @@ const marks = {
   },
 };
 
-const CountFilter = ({ hide, title, minVal, maxVal, startVal, endVal, unit, appliedFilter, valueKey }) => {
+const CountFilter = ({ hide, title, minVal, maxVal, unit, appliedFilter, valueKey }) => {
   const [rangeVal, setRangeVal] = useState(0);
 
   const handleChange = (val) => {
@@ -102,8 +102,6 @@ CountFilter.propTypes = {
   title: PropTypes.string,
   minVal: PropTypes.number,
   maxVal: PropTypes.number,
-  startVal: PropTypes.number,
-  endVal: PropTypes.number,
   unit: PropTypes.string,
   appliedFilter: PropTypes.func,
   valueKey: PropTypes.string,

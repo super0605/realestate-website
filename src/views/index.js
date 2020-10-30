@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import { Switch, Route, Redirect } from "react-router-dom";
-import AppLayout from "./Layout";
+import AppLayout from "../components/AppLayout";
 import HomePage from "./Home";
 import themes from "../constants/theme";
 import routes from "../constants/routes";
@@ -9,7 +9,7 @@ import routes from "../constants/routes";
 /**
  * will render component with header and side bar
  */
-const WithLayout = (Component, type) => (props) => (
+const withLayout = (Component, type) => (props) => (
   <AppLayout type={type}>
     <Component {...props} />
   </AppLayout>
@@ -43,13 +43,13 @@ const AppRoutes = () => {
         <AuthenticatedRoute
           exact
           path={routes.HOME}
-          component={WithLayout(HomePage)}
+          component={withLayout(HomePage)}
           token={access_token}
         />
         <AuthenticatedRoute
           exact
           path={routes.PROPERTY}
-          component={WithLayout(HomePage)}
+          component={withLayout(HomePage)}
           token={access_token}
         />
       </Switch>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
 import { produce } from "immer";
 import { Button } from "antd";
@@ -48,60 +48,67 @@ const FilterSection = ({ handleFilterOptions }) => {
     handleFilterOptions(defaultFilterOption);
   };
 
-  const priceFilterProps = {
-    title: "Price",
-    minVal: 0,
-    maxVal: 1000000,
-    startVal: 0,
-    endVal: 1000000,
-    unit: "€",
-    valueKey: "price",
-    appliedFilter: appliedFilter,
-  };
+  const [
+    priceFilterProps,
+    pricePerSqmFilterProps,
+    sqmFilterProps,
+    nOfBedroomsFilterProps,
+    nOfBathroomsFilterProps,
+  ] = useMemo(() => {
+    const price = {
+      title: "Price",
+      minVal: 0,
+      maxVal: 1000000,
+      startVal: 0,
+      endVal: 1000000,
+      unit: "€",
+      valueKey: "price",
+      appliedFilter,
+    };
+    const priceSqm = {
+      title: "Price Per Sqm",
+      minVal: 0,
+      maxVal: 10000,
+      startVal: 0,
+      endVal: 10000,
+      unit: "€/m²",
+      valueKey: "pricePerSqm",
+      appliedFilter,
+    };
+    const sqm = {
+      title: "Square Meter",
+      minVal: 0,
+      maxVal: 200,
+      startVal: 0,
+      endVal: 200,
+      unit: "m²",
+      valueKey: "sqm",
+      appliedFilter,
+    };
+    const bedrooms = {
+      title: "Number of Bedrooms",
+      minVal: 0,
+      maxVal: 10,
+      startVal: 0,
+      endVal: 10,
+      unit: "rooms",
+      valueKey: "numberOfBedrooms",
+      appliedFilter,
+    };
+    const bathrooms = {
+      title: "Number of Bathrooms",
+      minVal: 0,
+      maxVal: 10,
+      startVal: 0,
+      endVal: 10,
+      unit: "rooms",
+      valueKey: "numberOfBathrooms",
+      appliedFilter,
+    };
 
-  const pricePerSqmFilterProps = {
-    title: "Price Per Sqm",
-    minVal: 0,
-    maxVal: 10000,
-    startVal: 0,
-    endVal: 10000,
-    unit: "€/m²",
-    valueKey: "pricePerSqm",
-    appliedFilter: appliedFilter,
-  };
-
-  const sqmFilterProps = {
-    title: "Square Meter",
-    minVal: 0,
-    maxVal: 200,
-    startVal: 0,
-    endVal: 200,
-    unit: "m²",
-    valueKey: "sqm",
-    appliedFilter: appliedFilter,
-  };
-
-  const nOfBedroomsFilterProps = {
-    title: "Number of Bedrooms",
-    minVal: 0,
-    maxVal: 10,
-    startVal: 0,
-    endVal: 10,
-    unit: "rooms",
-    valueKey: "numberOfBedrooms",
-    appliedFilter: appliedFilter,
-  };
-
-  const nOfBathroomsFilterProps = {
-    title: "Number of Bathrooms",
-    minVal: 0,
-    maxVal: 10,
-    startVal: 0,
-    endVal: 10,
-    unit: "rooms",
-    valueKey: "numberOfBathrooms",
-    appliedFilter: appliedFilter,
-  };
+    return [price, priceSqm, sqm, bedrooms, bathrooms];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const formatPriceBtn = ({ startVal, endVal }) => {
     if (startVal !== null && endVal !== null) {

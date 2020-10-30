@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Menu } from "antd";
 import SearchInput from "../SearchInput";
-import { MenuOutlined } from "@ant-design/icons";
+import MenuOutlined from "@ant-design/icons/MenuOutlined";
 import {
   PageHeader,
   LogoText,

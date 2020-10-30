@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import PropTypes from "prop-types";
 import { Layout } from "antd";
 import Header from "../Header";
-import MainContainerContext from "../../context/MainContainerContext";
 import { LayoutContainer, MainWrapContainer, MainContainer, Wrapper } from "./styled";
 
 const AppLayout = ({ children, type }) => {
@@ -11,14 +10,12 @@ const AppLayout = ({ children, type }) => {
   return (
     <LayoutContainer>
       <Layout>
-        <MainContainerContext.Provider value={{ getContainer: () => wrapperRef.current || window }}>
-          <MainWrapContainer>
-            <Header />
-            <MainContainer type={type}>
-              <Wrapper ref={wrapperRef}>{children}</Wrapper>
-            </MainContainer>
-          </MainWrapContainer>
-        </MainContainerContext.Provider>
+        <MainWrapContainer>
+          <Header />
+          <MainContainer type={type}>
+            <Wrapper ref={wrapperRef}>{children}</Wrapper>
+          </MainContainer>
+        </MainWrapContainer>
       </Layout>
     </LayoutContainer>
   );

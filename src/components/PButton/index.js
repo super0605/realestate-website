@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { CustomButton, ButtonText } from "./styled";
 import { IconReset } from "../../assets/icons";
-import { LoadingOutlined } from "@ant-design/icons";
+import LoadingOutlined from "@ant-design/icons/LoadingOutlined";
 
 const btnMainType = {
   reset: "reset",

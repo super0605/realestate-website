@@ -90,7 +90,7 @@ exports[`ProductCard should render without problems 1`] = `
       />
        
       2
-       banos
+       baños
     </styled.div>
   </styled.div>
 </styled.div>

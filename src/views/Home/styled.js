@@ -12,7 +12,6 @@ export const DividerH = styled(Divider).attrs(({ theme }) => ({
 export const LoadingArea = styled.div`
   height: 100%;
   width: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 30px 0;
@@ -22,12 +21,13 @@ export const LoadingArea = styled.div`
   top: ${({ whole }) => whole && 0};
   left: ${({ whole }) => whole && 0};
   background-color: ${({ whole }) => whole && "rgb(217 217 217 / 0.5)"};
+  display: ${({ isLoading }) => (isLoading ? "flex" : "none")};
 `;
 
 export const ErrView = styled.div`
   width: 100%;
   height: 70%;
-  background-color: #ffffff;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;

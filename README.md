@@ -1,30 +1,11 @@
-# Dashboard Project
+# RealEstate website with React, Ant Design, Apollo GraphQL
 
-This is dashboard project React + Firebase
-
-## Architecture
-
-A React Redux application based around 3 main principles:
-
-* Exverything is a function (functional programming paradigm)
-* Immutability
-* Re-usability
-* Keep components as stateless and functional as possible
-
-The architecture for this application can be broken down into the following:
-
-* __Store__ - The single source of truth for the whole application
-* __Actions__ - A list of actions to perform against the store
-* __Reducers__ - Containing the logic for actions
-* __Components__ - Contains the reusable/specific components of ui elements (html)
-* __Containers__ - Responsible for passing state to components from the store
-* __Views__ - Responsible for building ui for the actual page routing
-* __Hooks__ - Containg custom hooks
+This is Realestate website project based on the best practice architecture and modern React stack.
 
 ## Prerequisites
 
-* node (tested with 13.x.x or more, might work with others)
-* npm or yarn
+* node (tested with 12.x.x or more, might work with others)
+* npm or yarn (recommend yarn)
 * Make sure you have added ssh keys to bitbucket
 
 ## Installation Steps
@@ -34,11 +15,11 @@ The architecture for this application can be broken down into the following:
 * Install __yarn__ 
 * Install project dependencies `$ yarn install`
 * Return to __project root folder__ `cd ..`
-* Start development server `$ yarn dev`
+* Start development server `$ yarn start`
 
-## Start development server
+## Running website
 
-`$ yarn dev`
+`$ yarn start`
 
 That will open a browser tab with the app and will keep linter running in a loop.
 
